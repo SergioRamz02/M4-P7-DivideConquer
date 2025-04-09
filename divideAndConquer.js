@@ -1,5 +1,10 @@
 //Encontrar el máximo de un elemento
 function findMax(arr) {
+    //Caso de un arreglo vacío
+    if(arr.length === 0){
+    return console.log("No hay un arreglo");
+    }
+
     // Agregar la condición del caso base
     if (arr.length <=1) {
         return arr[0];
@@ -15,11 +20,7 @@ function findMax(arr) {
     const rightMax = findMax(right); /* llamada recursiva */
 
     // Combinar las soluciones comparando los máximos
-    if(leftMax > rightMax){
-       return leftMax;
-    }else{
-       return rightMax;
-   }
+    return Math.max(leftMax, rightMax);
     
 }
 
